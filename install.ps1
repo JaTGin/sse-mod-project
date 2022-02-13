@@ -4,7 +4,6 @@ function Install-Mod {
 
 function Update-Mod {
     Copy-Item -Path ../the-sun-may-rise-again.esp -Destination .\installation\ -PassThru
-    Copy-Item -Path ../111test.txt -Destination .\installation\ -PassThru
 }
 
 function Install-Scripts {
