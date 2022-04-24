@@ -6,8 +6,10 @@ Scriptname TIF__02012082 Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
-GetOwningQuest().SetObjectiveDisplayed(60)
-GetOwningQuest().SetStage(60)
+getOwningQuest().setObjectiveCompleted(50)
+getOwningQuest().CompleteQuest()
+Game.GetPlayer().AddItem(EbonyFork)
+Game.GetPlayer().AddItem(EbonyFork)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -15,3 +17,5 @@ EndFunction
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
 ObjectReference Property Fork Auto
+
+WEAPON Property EbonyFork  Auto  

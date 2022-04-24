@@ -6,6 +6,7 @@ Scriptname TIF__0201207C Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
+GetOwningQuest().SetObjectiveCompleted(10)
 GetOwningQuest().SetObjectiveDisplayed(20)
 GetOwningQuest().SetStage(20)
 ;END CODE

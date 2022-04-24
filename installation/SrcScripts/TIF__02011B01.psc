@@ -9,8 +9,13 @@ Actor akSpeaker = akSpeakerRef as Actor
 game.EnableFastTravel()
 game.FastTravel(Location1)
 Groynin.MoveTo(Location1)
+GetOwningQuest().SetObjectiveCompleted(5)
 GetOwningQuest().SetObjectiveDisplayed(10)
 GetOwningQuest().SetStage(10)
+if GetOwningQuest().GetStage() <= 50
+TimeScale.SetValue(0.0)
+TimeOfDay.SetValue(1.0)
+endif
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -19,3 +24,7 @@ EndFunction
 
 ObjectReference Property Location1 Auto
 ObjectReference Property Groynin Auto
+
+GlobalVariable Property TimeOfDay  Auto  
+
+GlobalVariable Property TimeScale  Auto  
